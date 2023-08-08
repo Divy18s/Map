@@ -1,0 +1,21 @@
+Lab -1 
+
+Docker 
+
+Containers are a type of application abstraction that package code and dependencies together to create a fully packaged and portable computing environment. They are designed to run on various computing environments without the need to configure the application for each environment.Containers are divided into two types: operating system (OS) containers and application containers.
+OS containers: These are designed to run multiple processes and services: They share the same kernel of the host, which means that they can run on any operating system that supports the container technology.OS containers take up more space than application containers.
+
+
+Application containers: These are designed to package and run a single service.They contain all the necessary dependencies needed to ensure that the application behaves the same way every time it is used.Application containers are well-suited for microservices applications, where each service that makes up the application runs independently from one another.
+Many customers use both VMs and containers in their environments and may run containers inside of VMs. Containers and VMs are both ways of deploying applications while isolating the application from the underlying hardware.However, containers are more lightweight than VMs and consume much less computing power
+
+Commands 
+-Docker image pull <image_name> -> Pull the image from the Docker Registry
+-Docker Container run <image_name> -> to Run the seprate instance of image
+-DOcker container run <image_name> <Commands for image> -> run the command on the instance of image 
+-Docker container run -it <image_name> /bin/ash -> to get interactive session of termminal on the linux based image 
+-Docker container ls -> list of present working instance of images 
+-Docker container ls -a -> list of all invoked instances of images
+-Docker image ls -> list of all images currently avilable in local
+-Docker container start <con_id> -> start the previosly worked insatnce of image 
+-Docker container exec <con_id> <commands> -> to execute specific command in the insatce of image that we provided from con_id
